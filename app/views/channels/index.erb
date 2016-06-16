@@ -1,0 +1,39 @@
+<h3 class="center">SkyCast DTH</h3>
+<%= form_tag('/get_count', method: 'post', controller: :channels, id: 'channel_form') do %>
+    <div class="height40">
+      <%= label_tag(:lowest_channel, 'Lowest Channel', class: 'align-center') %>
+      <%= text_field_tag(:lowest_channel, nil, class: 'align-right') %>
+    </div>
+
+    <div class="height40">
+      <%= label_tag(:highest_channel, 'Highest Channel', class: 'align-center') %>
+      <%= text_field_tag(:highest_channel, nil, class: 'align-right') %>
+    </div>
+
+    <div class="height40">
+      <%= label_tag(:blocked_channel_size, 'Blocked Channel Size', class: 'align-center') %>
+      <%= text_field_tag(:blocked_channel_size, nil, class: 'align-right') %>
+    </div>
+
+    <div class="height40">
+      <%= label_tag(:blocked_channels, 'Blocked Channels', class: 'align-center') %>
+      <%= text_field_tag(:blocked_channels, nil, class: 'align-right') %>
+    </div>
+
+    <div class="height40">
+      <%= label_tag(:browsing_channel_size, 'Browsing Channel Size', class: 'align-center') %>
+      <%= text_field_tag(:browsing_channel_size, nil, class: 'align-right') %>
+    </div>
+
+    <div class="height40">
+      <%= label_tag(:browsing_channels, 'Browsing Channels', class: 'align-center') %>
+      <%= text_field_tag(:browsing_channels, nil, class: 'align-right') %>
+    </div>
+
+    <div class="height40 center" id="get_count">
+      <%= submit_tag 'Get Count' %>
+    </div>
+<% end %>
+
+<div id="count" class="center"></div>
+<div id="error" class="center"></div>
